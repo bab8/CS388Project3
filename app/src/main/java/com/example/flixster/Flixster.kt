@@ -14,4 +14,15 @@ class Flixster {
     @SerializedName("overview")
     var description: String? = null
 
+    @SerializedName("release_date")
+    var release: String? = null
+
+    @SerializedName("vote_count")
+    var votes: String? = null
+
+    @SerializedName("vote_average")
+    var rating: String? = null
+
+
+
 }

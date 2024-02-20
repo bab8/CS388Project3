@@ -1,5 +1,6 @@
 package com.example.flixster
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -47,7 +48,7 @@ class FlixsterFragment : Fragment(), OnListFragmentInteractionListener {
         params["api-key"] = API_KEY
 
         client[
-            "https://api.themoviedb.org/3/movie/now_playing?&api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed",
+            "https://api.themoviedb.org/3/movie/top_rated?&api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed",
             params,
             object : JsonHttpResponseHandler()
             {
@@ -86,7 +87,14 @@ class FlixsterFragment : Fragment(), OnListFragmentInteractionListener {
 
 
     override fun onItemClick(item: Flixster) {
-        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+        val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra("title", item.title)
+        intent.putExtra("img", item.movieImageUrl)
+        intent.putExtra("desc", item.description)
+        intent.putExtra("votes", item.votes)
+        intent.putExtra("rating", item.rating)
+        intent.putExtra("release", item.release)
+        context?.startActivity(intent)
     }
 
 }

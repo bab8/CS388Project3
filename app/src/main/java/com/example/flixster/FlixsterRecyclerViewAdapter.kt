@@ -1,5 +1,6 @@
 package com.example.flixster
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
@@ -25,7 +26,6 @@ class FlixsterRecyclerViewAdapter(private val movies: List<Flixster>,
 
     inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val mMovieTitle: TextView = mView.findViewById<View>(id.movie_title) as TextView
-        val mMovieDescription: TextView = mView.findViewById<View>(id.movie_description) as TextView
         val mMovieImage: ImageView = mView.findViewById<View>(id.movie_image) as ImageView
         var mItem: Flixster? = null
 
@@ -39,7 +39,6 @@ class FlixsterRecyclerViewAdapter(private val movies: List<Flixster>,
 
         holder.mItem = movie
         holder.mMovieTitle.text = movie.title
-        holder.mMovieDescription.text = movie.description
         val imageUrl = "https://image.tmdb.org/t/p/w500" + movie.movieImageUrl
 
         Glide.with(holder.mView)
