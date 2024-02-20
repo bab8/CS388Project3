@@ -1,8 +1,9 @@
-# Android Project 3 - *Flixster*
+# Android Project 4 - *Flixster 2.0*
 
 Submitted by: **Brian Brisson**
 
-**Flixster** is a movie browsing app that allows users to browse movies currently playing in theaters.
+**Flixster 2.0** is a movie browsing app that allows users to browse see the top rated movies and see details
+about those movies such as rating and vote count
 
 Time spent: **3** hours spent in total
 
@@ -10,17 +11,17 @@ Time spent: **3** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
-- [x] **Parse through JSON data and implement a RecyclerView to display all movies**
-- [x] **Use Glide to load and display movie poster images**
+- [x] **Choose any endpoint on The MovieDB API except `now_playing`**
+  - Chosen Endpoint: `[top_rated]`
+- [x] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
+- [x] **Use Glide to load and display at least one image per entry**
+- [x] **Click on an entry to view specific details about that entry using Intents**
 
 The following **optional** features are implemented:
 
-- [ ] Improve and customize the user interface through styling and coloring
-- [ ] Implement orientation responsivity
-  - App should neatly arrange data in both landscape and portrait mode
-- [ ] Implement Glide to display placeholder graphics during loading
-  - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
+- [ ] **Add another API call and RecyclerView that lets the user interact with different data.** 
+- [ ] **Add rounded corners to the images using the Glide transformations**
+- [ ] **Implement a shared element transition when user clicks into the details of a movie**
 
 The following **additional** features are implemented:
 
@@ -31,13 +32,10 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 
-https://github.com/bab8/CS388Project3/assets/89927142/8f3c15c1-f8a0-4dce-bf36-f68ffc21f4ad
-
+https://github.com/bab8/CS388Project3/assets/89927142/822e6852-5487-4cdf-8431-e86e1bf4faa4
 
 ## Notes
-
-The major challenge building this app was figuring out the JSON structure from the API result since it was different from the lab. However, after studying it
-and using the provided resources I was able to figure it out.
+I had some difficulty deciding on to go back to the Main activity ultimately just deciding to use a button.
 
 ## License
 
